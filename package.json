@@ -12,6 +12,7 @@
   "description": "",
   "devDependencies": {
     "cypress": "^13.14.1",
+    "cypress-msteams-reporter": "^1.0.4",
     "mocha": "^10.7.3"
   },
   "dependencies": {

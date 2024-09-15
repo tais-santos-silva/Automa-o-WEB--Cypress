@@ -1,0 +1,5 @@
+name: Run Basics Testes
+
+on:
+  pull_request:
+    branches: [main]
