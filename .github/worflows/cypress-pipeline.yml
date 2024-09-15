@@ -1,0 +1,26 @@
+name: Run Basic Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout/Clone do projeto
+        uses: actions/checkout@v4
+
+      - name: Run test
+        uses: cypress-io/github-action@v6
+        with: 
+          record: true
+        env: CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+
+
+      - name: Run test
+        uses: actions/upload-artifact@v4
+          with:
+            name: Relatório
+            path: cypress\reports\html
