@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-15T11:57:47.240Z",
+    "end": "2024-09-15T11:58:03.588Z",
+    "duration": 16348,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "635bdc90-03ab-4d10-9955-4e1bfdeda261",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cadastro.cy.js",
+      "file": "cypress\\e2e\\cadastro.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "224d21e0-fe42-4fa1-a517-7e894694932d",
+          "title": "Criar conta",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastro de usuário com sucesso",
+              "fullTitle": "Criar conta Cadastro de usuário com sucesso",
+              "timedOut": null,
+              "duration": 3017,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user').type(nome);\ncy.get('#email').type(email);\ncy.get('#password').type(senha);\ncy.get('#btnRegister').click();\ncy.get('#swal2-title').should('be.visible').should('have.text', 'Cadastro realizado!');\ncy.get('#swal2-html-container').should('be.visible').should('have.text', `Bem-vindo ${nome}`);",
+              "err": {},
+              "uuid": "4cf1e4b3-8054-4888-94ee-1a35d560d85e",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com nome vazio",
+              "fullTitle": "Criar conta Cadastro de usuário com nome vazio",
+              "timedOut": null,
+              "duration": 1425,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#email').type(email);\ncy.get('#password').type(senha);\ncy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').and('have.text', 'O campo nome deve ser prenchido');",
+              "err": {},
+              "uuid": "a29bacd8-d2ed-47b8-944e-7a058597e46a",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com e-mail vazio",
+              "fullTitle": "Criar conta Cadastro de usuário com e-mail vazio",
+              "timedOut": null,
+              "duration": 1574,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user').type(nome);\ncy.get('#password').type(senha);\ncy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').and('have.text', 'O campo e-mail deve ser prenchido corretamente');",
+              "err": {},
+              "uuid": "e40ee4a5-8cf7-4305-9b58-a2f0321507c3",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com senha vazia",
+              "fullTitle": "Criar conta Cadastro de usuário com senha vazia",
+              "timedOut": null,
+              "duration": 1373,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user').type(nome);\ncy.get('#email').type(email);\ncy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').and('have.text', 'O campo senha deve ter pelo menos 6 dígitos');",
+              "err": {},
+              "uuid": "5597a673-8449-492c-b5ed-ffb51e4f8ddf",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com todos os campos vazios",
+              "fullTitle": "Criar conta Cadastro de usuário com todos os campos vazios",
+              "timedOut": null,
+              "duration": 516,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').should('have.text', 'O campo nome deve ser prenchido');\n//cy.get('#errorMessageEmail') .should('be.visible').and('have.text', 'O campo e-mail deve ser preenchido corretamente')\n//cy.get('.errorLabel').should('be.visible').and('have.text', 'O campo senha deve ter pelo menos 6 dígitos')",
+              "err": {},
+              "uuid": "2375e149-15a3-497f-9836-4d9e24dcc433",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com e-mail inválido",
+              "fullTitle": "Criar conta Cadastro de usuário com e-mail inválido",
+              "timedOut": null,
+              "duration": 1440,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user').type('Tais Santos');\ncy.get('#email').type('taiss4379@gmail');\ncy.get('#password').type('123456789Senha');\ncy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').and('have.text', 'O campo e-mail deve ser prenchido corretamente');",
+              "err": {},
+              "uuid": "4c444924-0d3f-44b8-a962-3971659c898c",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastro de usuário com senha inválida",
+              "fullTitle": "Criar conta Cadastro de usuário com senha inválida",
+              "timedOut": null,
+              "duration": 1723,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#user').type('Tais Santos');\ncy.get('#email').type('taiss4379@gmail.com');\ncy.get('#password').type('12');\ncy.get('#btnRegister').click();\ncy.get('#errorMessageFirstName').should('be.visible').and('have.text', 'O campo senha deve ter pelo menos 6 dígitos');",
+              "err": {},
+              "uuid": "4fa06f7b-488b-40ac-8e5b-2cf3a6387986",
+              "parentUUID": "224d21e0-fe42-4fa1-a517-7e894694932d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4cf1e4b3-8054-4888-94ee-1a35d560d85e",
+            "a29bacd8-d2ed-47b8-944e-7a058597e46a",
+            "e40ee4a5-8cf7-4305-9b58-a2f0321507c3",
+            "5597a673-8449-492c-b5ed-ffb51e4f8ddf",
+            "2375e149-15a3-497f-9836-4d9e24dcc433",
+            "4c444924-0d3f-44b8-a962-3971659c898c",
+            "4fa06f7b-488b-40ac-8e5b-2cf3a6387986"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11068,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
